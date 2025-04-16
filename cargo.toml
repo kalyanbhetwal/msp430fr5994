@@ -1,7 +1,8 @@
+
 [package]
 name = "msp430fr5994"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 authors = [
     "Kalyan Bhetwal <kalyanbtl@gmail.com>",
 ]
