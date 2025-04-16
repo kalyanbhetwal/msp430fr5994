@@ -1,0 +1,22 @@
+[package]
+name = "msp430fr5994"
+version = "0.1.0"
+edition = "2024"
+authors = [
+    "Kalyan Bhetwal <kalyanbtl@gmail.com>",
+]
+description = "Peripheral access crate for MSP430FR5994 microcontroller"
+categories = ["embedded", "hardware-support", "no-std"]
+keywords = ["no-std", "msp430", "ti", "launchpad", "ibuttonlink"]
+repository = "https://github.com/kalyanbhetwal/msp430fr5994"
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/msp430fr5994"
+
+[dependencies]
+critical-section = { version = "1.0", optional = true }
+msp430 = "0.4.0"
+msp430-rt = { version = "0.4.0", optional = true }
+vcell = "0.1.0"
+
+[features]
+rt = ["msp430-rt/device"]
