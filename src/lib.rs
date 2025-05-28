@@ -59,24 +59,36 @@ pub union Vector {
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
 #[used]
-pub static __INTERRUPTS: [Vector; 54] = [
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+pub static __INTERRUPTS: [Vector; 63] = [
+    Vector {_reserved :  0}, //some _reserved area
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+
+    Vector {_reserved :  0}, //some _reserved area
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    
+    Vector {_reserved :  0}, //some _reserved area
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+    Vector {_reserved :  0},
+
     Vector { _handler: LEA },
     Vector { _handler: PORT8 },
     Vector { _handler: PORT7 },
@@ -87,54 +99,30 @@ pub static __INTERRUPTS: [Vector; 54] = [
     Vector { _handler: EUSCI_A2 },
     Vector { _handler: PORT6 },
     Vector { _handler: PORT5 },
-    Vector {
-        _handler: TIMER4_A1,
-    },
-    Vector {
-        _handler: TIMER4_A0,
-    },
+    Vector { _handler: TIMER4_A1 },
+    Vector { _handler: TIMER4_A0 },
     Vector { _handler: AES256 },
     Vector { _handler: RTC_C },
     Vector { _handler: PORT4 },
     Vector { _handler: PORT3 },
-    Vector {
-        _handler: TIMER3_A1,
-    },
-    Vector {
-        _handler: TIMER3_A0,
-    },
+    Vector { _handler: TIMER3_A1 },
+    Vector { _handler: TIMER3_A0 },
     Vector { _handler: PORT2 },
-    Vector {
-        _handler: TIMER2_A1,
-    },
-    Vector {
-        _handler: TIMER2_A0,
-    },
+    Vector { _handler: TIMER2_A1 },
+    Vector { _handler: TIMER2_A0 },
     Vector { _handler: PORT1 },
-    Vector {
-        _handler: TIMER1_A1,
-    },
-    Vector {
-        _handler: TIMER1_A0,
-    },
+    Vector { _handler: TIMER1_A1 },
+    Vector { _handler: TIMER1_A0 },
     Vector { _handler: DMA },
     Vector { _handler: EUSCI_A1 },
-    Vector {
-        _handler: TIMER0_A1,
-    },
-    Vector {
-        _handler: TIMER0_A0,
-    },
+    Vector { _handler: TIMER0_A1 },
+    Vector { _handler: TIMER0_A0 },
     Vector { _handler: ADC12_B },
     Vector { _handler: EUSCI_B0 },
     Vector { _handler: EUSCI_A0 },
     Vector { _handler: WDT },
-    Vector {
-        _handler: TIMER0_B1,
-    },
-    Vector {
-        _handler: TIMER0_B0,
-    },
+    Vector { _handler: TIMER0_B1 },
+    Vector { _handler: TIMER0_B0 },
     Vector { _handler: COMP_E },
     Vector { _handler: UNMI },
     Vector { _handler: SYSNMI },
